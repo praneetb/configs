@@ -1,0 +1,45 @@
+"
+" --- vim settings ---
+"
+:set number
+:set relativenumber
+:set autoindent
+:set tabstop=4
+:set shiftwidth=4
+:set smarttab
+:set softtabstop=4
+:set mouse=a
+
+nnoremap <C-i> :%!jq .<CR>
+"
+" --- plugins installed ---
+"
+source $HOME/.config/nvim/plugins.vim
+
+"
+" --- plugins config ---
+"
+source $HOME/.config/nvim/modules/airline.vim
+source $HOME/.config/nvim/modules/ale.vim
+source $HOME/.config/nvim/modules/comment.vim
+source $HOME/.config/nvim/modules/coc.vim
+" source $HOME/.config/nvim/modules/completion-nvim.vim
+source $HOME/.config/nvim/modules/fTerm.vim
+source $HOME/.config/nvim/modules/gitblame.vim
+source $HOME/.config/nvim/modules/litee.vim
+source $HOME/.config/nvim/modules/nerdtree.vim
+source $HOME/.config/nvim/modules/nvim-treesitter.vim
+source $HOME/.config/nvim/modules/tagbar.vim
+source $HOME/.config/nvim/modules/telescope.vim
+source $HOME/.config/nvim/modules/vim-go.vim
+source $HOME/.config/nvim/modules/vim-yaml-folds.vim
+" source $HOME/.config/nvim/modules/which-key.vim
+" source $HOME/.config/nvim/modules/gh.nvim
+" source $HOME/.config/nvim/modules/vim-gotests.vim
+source $HOME/.config/nvim/modules/fzf.vim
+source $HOME/.config/nvim/modules/renamer.vim
+
+
+set encoding=UTF-8
+
+

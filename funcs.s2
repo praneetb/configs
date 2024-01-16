@@ -1,0 +1,60 @@
+whereis () {
+    find . -name "$1*"
+}
+
+mkcd () {
+    mkdir -p $1
+    cd $1
+}
+
+gitdellastbranch () {
+    lastbranch=$(parse_git_branch | tr -d '[()]' | xargs)  && git push --delete origin $lastbranch || true && git checkout master && git branch -D $lastbranch
+    git pull -q origin master
+}
+
+gitcleanupbranches () {
+    print "y for del n for skip"
+    for a in $(git branch | egrep -v master)
+    do
+        echo $a
+        read -u 1 input
+        case $input in
+            (y) git branch -D $a
+                git push origin -d $a ;;
+             (n) echo "nooo" ;;
+        esac
+    done
+}
+
+cl () {
+    DIR="$*"
+    if [ $# -lt 1 ]
+    then
+        DIR=$HOME
+    fi
+    builtin cd "${DIR}" && ls -G -F
+}
+
+open_window () {
+    open --new -a "Brave Browser" $@
+}
+
+open_tab () {
+    open -a "Brave Browser" $@
+}
+
+sel () {
+    open_tab "http://s2m.selector.ai/"
+    sleep 1
+    open_tab "http://localhost:$1/rules/prometheus/graph"
+    open_tab "http://localhost:$1/dh/netmon/opstats"
+    open_tab "http://localhost:$1/vitals2/v1/opstats/telemetry"
+    open_tab "http://localhost:$1/col/api/collection/snmp/reports"
+    open_tab "http://localhost:$1/col/api/collection/kafka/reports"
+    open_tab "http://localhost:$1/vitals2/v1/opstats/engine-snmp"
+    open_tab "http://localhost:$1/vitals2/v1/opstats/engine-kafka"
+	open_tab "http://127.0.0.1:$1/mon/instance/info"
+    open_tab "http://127.0.0.1:$1/mon/health"
+    open_tab "http://127.0.0.1:$1/mon/agents/opstats/detail"
+}
+

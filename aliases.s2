@@ -1,0 +1,63 @@
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
+alias -g G="| grep"
+alias -g L="| less"
+alias f='history|fzf'
+alias bb1='ssh ubuntu@heatmap-backbone1.selector.ai'
+alias bbk1='ssh ubuntu@heatmap-backbone1-kafka.selector.ai'
+alias bbprod1='ssh ubuntu@96.107.126.18'
+alias bbprod2='ssh ubuntu@96.107.126.19'
+alias bbprod3='ssh ubuntu@96.107.126.20'
+alias bbprod4='ssh ubuntu@96.107.126.21'
+alias comcast='ssh -i ~/.ssh/pem/comcast.pem -p 2200 ubuntu@96.118.243.178'
+alias heatmap-test='ssh -i ~/.ssh/pem/comcast.pem -p 2200 pingmesh@96.104.42.35'
+alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias eve='gcloud beta compute ssh --zone us-central1-a eve-ng-vm --project s2-infra --internal-ip'
+alias fgrep='grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias mlbs='ssh root@35.233.230.134 -L 27017:localhost:27017'
+
+alias myvm='gcloud beta compute ssh --zone us-west1-c praneetb-dev --project s2-dev-03062020 --internal-ip'
+alias myvm-start='gcloud beta compute instances start --zone us-west1-c praneetb-dev --project s2-dev-03062020'
+alias myvm-stop='gcloud beta compute instances stop --zone us-west1-c praneetb-dev --project s2-dev-03062020'
+alias myvm-resume='gcloud beta compute instances resume --zone us-west1-c praneetb-dev --project s2-dev-03062020'
+
+alias seb='gcloud compute ssh --zone "us-west1-c" "seb-dev"  --internal-ip --project "s2-dev-03062020"'
+alias seb-start='gcloud beta compute instances start --zone us-west1-c seb-dev --project s2-dev-03062020'
+alias seb-stop='gcloud beta compute instances stop --zone us-west1-c seb-dev --project s2-dev-03062020'
+
+alias aniket='gcloud compute ssh --zone "us-west1-b" "aniket-dev" --internal-ip --project "s2-dev-03062020"'
+alias santosh='gcloud compute ssh --zone "asia-south1-b" "santoshpk-dev" --project "s2-dev-03062020" --internal-ip'
+alias abhi='gcloud compute ssh --zone "us-west1-c" "abhinav-dev"  --internal-ip --project "s2-dev-03062020" --ssh-flag="-o ServerAliveInterval=5 -o ServerAliveCountMax=1"'
+alias vignesh='gcloud compute ssh --zone "us-west1-a" "vignesh-dev" --internal-ip --project "s2-dev-03062020"'
+alias max='gcloud compute ssh --zone "us-east4-b" "max-abishev-dev" --internal-ip --project "s2-dev-03062020"'
+
+
+alias walmart='gcloud compute ssh --zone "us-west1-a" "walmart-s2ap" --project "s2-prod" --internal-ip'
+alias cisco='gcloud compute ssh --zone "us-west1-a" "networkanalytics-s2ap" --project "s2-prod" --internal-ip'
+alias linx='gcloud compute ssh --zone "us-east1-b" "linx-jumphost"  --internal-ip --project "s2-infra"'
+alias children='gcloud compute ssh --zone "us-central1-a" "childrens-poc" --internal-ip --project "s2-prod"'
+alias mlba='gcloud compute ssh --zone "us-west1-a" "mlb-angels" --project "s2-prod" --internal-ip'
+
+alias pubapi='build apiserver'
+alias pubcol='build collection'
+alias pubeng='build engine'
+alias pubmock='build mock-data'
+alias pubmongo='build connectors/mongodb'
+alias pubprom='build connectors/prometheus'
+alias pubtel='build telemetry'
+alias search='web_search google'
+alias stackoverflow='web_search stackoverflow'
+alias so='web_search stackoverflow'
+alias ungron='gron --ungron'
+alias fzf="fzf --preview 'bat --color=always {}'"
+alias vi=nvim
+alias vif='nvim $(fzf)'
+alias ws='$HOME/code/s2/s2ap'
+alias youtube=/Library/Frameworks/Python.framework/Versions/3.7/bin/yt
+alias yt=/Library/Frameworks/Python.framework/Versions/3.7/bin/yt
+
+export WS="$HOME/code/s2/s2ap"
+alias lg=lazygit
+
