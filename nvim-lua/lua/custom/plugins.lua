@@ -102,6 +102,27 @@ local plugins = {
       end
     end
   },
+  {
+    "dreamsofcode-io/ChatGPT.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+    config = function()
+      require("chatgpt").setup({
+        api_key_cmd = "pass show chatgp.nvim",
+      })
+    end,
+  },
+  {
+    "f-person/git-blame.nvim",
+    lazy = false,
+    config = function()
+      require("core.utils").load_mappings("gitblame")
+    end
+  },
 }
 return plugins
 

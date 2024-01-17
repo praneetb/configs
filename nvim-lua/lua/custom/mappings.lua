@@ -69,4 +69,17 @@ M.dap_python = {
   }
 }
 
+M.gitblame = {
+  plugin = true,
+  n = {
+    ["<leader>gbt"] = {
+      "<cmd> GitBlameToggle<CR>",
+      "Toggle git blame"
+    },
+    ["<leader>gbc"] = {
+      "<cmd> GitBlameOpenCommitURL<CR>",
+      "git blame commit"
+    },
+  }
+}
 return M
