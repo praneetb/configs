@@ -123,6 +123,10 @@ local plugins = {
       require("core.utils").load_mappings("gitblame")
     end
   },
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
 }
 return plugins
 
