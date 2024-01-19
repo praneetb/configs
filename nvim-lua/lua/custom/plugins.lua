@@ -127,6 +127,10 @@ local plugins = {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
   },
+  {
+    lazy = false,
+    'rhysd/vim-fixjson',
+  },
 }
 return plugins
 
