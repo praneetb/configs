@@ -1,6 +1,9 @@
 local plugins = {
   {
     "williamboman/mason.nvim",
+    init = function()
+      require("core.utils").load_mappings("misc")
+    end,
     opts = {
       ensure_installed = {
         "gopls",

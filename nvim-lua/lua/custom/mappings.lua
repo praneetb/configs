@@ -1,5 +1,19 @@
 local M = {}
 
+M.misc = {
+  plugin = true,
+  n = {
+    ["<leader>ce"] = {
+      "<cmd> set clipboard=unnamedplus <CR>",
+      "Enable clipboard"
+    },
+    ["<leader>cd"] = {
+      "<cmd> set clipboard=<CR>",
+      "Disable clipboard"
+    },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
@@ -82,4 +96,5 @@ M.gitblame = {
     },
   }
 }
+
 return M
