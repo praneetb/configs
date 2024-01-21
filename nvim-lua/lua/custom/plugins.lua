@@ -134,6 +134,14 @@ local plugins = {
     lazy = false,
     'rhysd/vim-fixjson',
   },
+  {
+    lazy = false,
+    'ekalinin/Dockerfile.vim',
+  },
+  {
+    lazy = false,
+    'xiyaowong/transparent.nvim',
+  },
 }
 return plugins
 
