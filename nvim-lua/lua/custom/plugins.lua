@@ -142,6 +142,24 @@ local plugins = {
     lazy = false,
     'xiyaowong/transparent.nvim',
   },
+  {
+    lazy = false,
+    'nguyenvukhang/nvim-toggler',
+    config = function()
+      require('nvim-toggler').setup()
+    end
+  },
+  {
+    lazy = false,
+    'ThePrimeagen/harpoon',
+    config = function()
+      require("core.utils").load_mappings("harpoon")
+    end
+  },
+  {
+    lazy = false,
+    'tpope/vim-surround',
+  },
 }
 return plugins
 

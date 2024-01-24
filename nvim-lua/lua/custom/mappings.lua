@@ -97,4 +97,22 @@ M.gitblame = {
   }
 }
 
+M.harpoon = {
+  plugin = true,
+  n = {
+    ["<leader>ma"] = {
+      "<cmd> lua require('harpoon.mark').add_file() <CR>",
+      "add file harpoon"
+    },
+    ["<leader>md"] = {
+      "<cmd> lua require('harpoon.mark').rm_file() <CR>",
+      "del file harpoon"
+    },
+    ["<leader>ms"] = {
+      "<cmd> Telescope harpoon marks <CR>",
+      "show marks harpoon"
+    },
+  }
+}
+
 return M
